@@ -7,7 +7,7 @@ export const calcScore = (price) => {
 }
 
 export const getTransactions = async (monthsAgo) => {
-  const response = await fetch('http://localhost:3005/transactions');
+  const response = await fetch('http://localhost:3005/transactions/monthsAgo');
   const data = await response.json();
   const transactionsByMonth = data.reduce(( acc, each ) => {
      const clonedAcc = cloneDeep(acc);
